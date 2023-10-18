@@ -25,4 +25,4 @@ To use the system, users will need to create an account on the web application o
 
 ## Circuit:
 
-<img src='Circuit.png'><img>
+<img src='https://github.com/josephsharon07/CAD_Phase1/blob/main/Circuit.png?raw=true'><img>
