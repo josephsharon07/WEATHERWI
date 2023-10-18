@@ -25,4 +25,4 @@ To use the system, users will need to create an account on the web application o
 
 ## Circuit:
 
-![](circuit.png)
+<img src='Circuit.png'><img>
