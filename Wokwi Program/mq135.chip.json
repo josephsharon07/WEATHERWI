@@ -1,0 +1,20 @@
+{
+  "name": "mq135",
+  "author": "josephsharon07",
+  "pins": [
+    "GND",
+    "VCC",
+    "OUT",
+    ""
+  ],
+  "controls": [
+    {
+      "id": "voltage",
+      "label": "Analog voltage",
+      "type": "range",
+      "min": 0,
+      "max": 1000,
+      "step": 1
+    }
+  ]
+}
