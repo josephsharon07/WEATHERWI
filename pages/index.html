@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>WEATHERWI</title>
+    <meta property="og:image" content="logo.png">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Weatherwi",
+            "url": "https://weatherwi.jarviz.live/"
+        }
+    </script>
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/logo-dark.png">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/logo-dark.png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/logo-dark.png">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/logo-dark.png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/logo-dark.png">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/logo-dark.png">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/logo-dark.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/vapor/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="assets/css/Features-Cards-icons.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-body">
+        <div class="container-fluid"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><img src="assets/img/logo-side-dark.png" style="height: 100px;width: auto;" width="179" height="67">
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="detailed_view.html">Detailed View</a></li>
+                </ul>
+            </div><a class="navbar-brand" href="#"></a>
+        </div>
+    </nav>
+    <div class="d-xl-flex align-items-xl-center">
+        <div class="card" style="border-radius: 26.4px;border-color: rgb(255,255,255);width: 240.2px;padding: 0px;margin: 76px;">
+            <div class="card-body" style="text-align: center;">
+                <h4 class="card-title" id="date">Date</h4>
+                <h6 class="text-muted card-subtitle mb-2" id="time">Time</h6><img id="image" src="assets/img/partly-cloudy.png" style="width: 157px;margin: 19px;">
+                <h4 class="card-title" id="weather">Sunny</h4>
+                <h1 class="card-title" id="temp"><strong>30</strong></h1>
+            </div>
+        </div>
+        <div class="table-responsive" style="border-color: rgb(255,255,255);width: 363.2px;margin: 15px;">
+            <table class="table">
+                <thead class="visually-hidden">
+                    <tr></tr>
+                </thead>
+                <tbody style="border-width: 2px;border-color: var(--bs-body-color);border-radius: 10px;">
+                    <tr>
+                        <td style="width: 150.775px;border-width: 0.5px;border-color: #ffffff;">Temperature</td>
+                        <td id="temperature" style="width: 58.612px;text-align: right;border-width: 0.5px;border-color: #ffffff;">30</td>
+                        <td style="width: 20.537px;border-width: 0.5px;border-color: #ffffff;">°C</td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0.5px;border-color: #ffffff;">Humidity</td>
+                        <td id="humi" style="text-align: right;border-width: 0.5px;border-color: #ffffff;">75</td>
+                        <td style="border-width: 0.5px;border-color: #ffffff;">%</td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0.5px;border-color: #ffffff;">Light Intensity</td>
+                        <td id="liinten" style="text-align: right;border-width: 0.5px;border-color: #ffffff;">100000</td>
+                        <td style="border-width: 0.5px;border-color: #ffffff;">lux</td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0.5px;border-color: #ffffff;">Air Quality</td>
+                        <td id="airqual" style="text-align: right;border-width: 0.5px;border-color: #ffffff;">1000</td>
+                        <td style="border-width: 0.5px;border-color: #ffffff;">ppm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
