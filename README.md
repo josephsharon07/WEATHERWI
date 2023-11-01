@@ -63,6 +63,3 @@ The project has successfully transitioned from the planning and design phase to 
 
 We are proud of the accomplishments of the WEATHERWI IoT Weather and Environment Monitoring System and look forward to its continued success in providing essential environmental information to users.
 
-![WEATHERWI IoT Weather and Environment Monitoring System](project_image.jpg)
-
-Thank you for your attention and support throughout this project journey.
