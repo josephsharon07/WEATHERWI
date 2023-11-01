@@ -11,15 +11,17 @@ fetch(url)
     // Now you can work with your JSON data
     const date = jsonData.date;
     const time = jsonData.time;
-    const humidity = jsonData.data.humi;
-    const temperature = jsonData.data.temp;
-    const lightIntensity = jsonData.data.lig_inten;
-    const airQuality = jsonData.data.air_qual;
+    const humidity = jsonData.data.Humidity;
+    const temperature = jsonData.data.Temperature;
+    const lightIntensity = jsonData.data['Light Intensity'];
+    const airQuality = jsonData.data['Air Quality'];
+
 
     // Update your HTML elements with the data
     document.getElementById('date').textContent = date;
     document.getElementById('time').textContent = time;
-    document.getElementById('temperature').textContent = temperature + ' °C';
+    document.getElementById('temp').textContent = temperature + ' °C';
+    document.getElementById('temperature').textContent = temperature ;
     document.getElementById('humi').textContent = humidity;
     document.getElementById('liinten').textContent = lightIntensity;
     document.getElementById('airqual').textContent = airQuality;
