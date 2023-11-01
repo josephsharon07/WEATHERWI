@@ -10,7 +10,7 @@
   "controls": [
     {
       "id": "voltage",
-      "label": "Analog voltage",
+      "label": "Air Polution",
       "type": "range",
       "min": 0,
       "max": 1000,

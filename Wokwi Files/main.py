@@ -20,18 +20,18 @@ def get_ist_datetime():
     return date, time
 
 def push(dat):
-    time = get_ist_datetime()
+    date, time = get_ist_datetime()
     repository_owner = 'josephsharon07'
-    repository_name = 'CAD_Phase1'
+    repository_name = 'WEATHERWI'
     file_path = 'Database/Database.json'
     branch_name = 'main'
     file_url = f'https://api.github.com/repos/{repository_owner}/{repository_name}/contents/{file_path}'
-    access_token = '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'
+    access_token = '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'
     headers = {
-    'Authorization': f'token {access_token}',
-    'Accept': 'application/vnd.github.v3+json',
-    'User-Agent': 'IBM-Project'
-}
+        'Authorization': f'token {access_token}',
+        'Accept': 'application/vnd.github.v3+json',
+        'User-Agent': 'IBM-Project'
+    }
     
     try:
         response = requests.get(file_url, headers=headers)
@@ -40,10 +40,14 @@ def push(dat):
             content_base64 = data['content']
             content = b64d(content_base64).decode('utf-8')
             data_to_update = json.loads(content)
-            data_to_update[str(time[0])+' '+str(time[1])] = dat
+            data_to_update[date+" "+time] = {
+                'date': date,
+                'time': time,
+                'data': dat
+            }
             data_to_update = json.dumps(data_to_update).encode('utf-8')
             updated_content = b64e(data_to_update).decode()
-            commit_message = str(time[0])+' '+str(time[1])
+            commit_message = f'Update data for {date} {time}'
             payload = {
                 "message": commit_message,
                 "content": updated_content,
@@ -64,14 +68,14 @@ def push(dat):
     except Exception as e:
         print("An error occurred:", e)
 
-
 def push_(dat):
+    date, time = get_ist_datetime()
     repository_owner = 'josephsharon07'
-    repository_name = 'CAD_Phase1'
+    repository_name = 'WEATHERWI'
     file_path = 'Database/liveData.json'
     branch_name = 'main'
     file_url = f'https://api.github.com/repos/{repository_owner}/{repository_name}/contents/{file_path}'
-    access_token = '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'
+    access_token = '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'
     headers = {
         'Authorization': f'token {access_token}',
         'Accept': 'application/vnd.github.v3+json',
@@ -81,12 +85,14 @@ def push_(dat):
     try:
         response = requests.get(file_url, headers=headers)
         data = response.json()
-        data_to_update = {}
-        time = get_ist_datetime()
-        data_to_update[str(time[0]) + ' ' + str(time[1])] = dat
+        data_to_update = {
+            'date': date,
+            'time': time,
+            'data': dat
+        }
         data_to_update = json.dumps(data_to_update).encode('utf-8')
         updated_content = b64e(data_to_update).decode()
-        commit_message = str(time[0]) + ' ' + str(time[1])
+        commit_message = f'Update live data for {date} {time}'
         payload = {
             "message": commit_message,
             "content": updated_content,
@@ -135,10 +141,10 @@ while True:
   print("Air Quality : "+str(int(read_mq135()))+" PPM")
   print("---------------------------------------------------------------------------------")
   data = {
-    'temp' : str(int(read_dht22()[0])),
-    'humi' : str(int(read_dht22()[1])),
-    'lig_inten' : str(int(read_ldr())),
-    'air_qual'  : str(int(read_mq135()))
+    'Temperature' : str(int(read_dht22()[0])),
+    'Humidity' : str(int(read_dht22()[1])),
+    'Light Intensity' : str(int(read_ldr())),
+    'Air Quality'  : str(int(read_mq135()))
   }
   push_(data)
   push(data)

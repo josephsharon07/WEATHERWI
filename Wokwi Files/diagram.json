@@ -14,7 +14,7 @@
       "type": "wokwi-photoresistor-sensor",
       "id": "ldr1",
       "top": -44.8,
-      "left": -604,
+      "left": -613.6,
       "attrs": {}
     },
     {
@@ -23,7 +23,7 @@
       "top": -16.2,
       "left": -164.1,
       "rotate": 90,
-      "attrs": { "humidity": "70", "temperature": "6.9" }
+      "attrs": { "humidity": "73.5", "temperature": "42.6" }
     },
     { "type": "chip-mq135", "id": "chip1", "top": 49.02, "left": -580.8, "attrs": {} }
   ],
