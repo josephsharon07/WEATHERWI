@@ -1,4 +1,4 @@
-# WEATHERWI 
+![WEATHERWI IoT Weather and Environment Monitoring System](/docs/assets/img/logo-side-dark.png)
 
 # IoT Weather and Environment Monitoring System - Final Project Document
 
