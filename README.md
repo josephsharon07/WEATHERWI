@@ -1,3 +1,4 @@
+# WEATHERWI
 # IoT Weather and Environment Monitoring System
 
 This project aims to develop a comprehensive IoT-based system to monitor weather conditions, light intensity, and air quality in a given area. The collected data will be accessible through both a web application and an Android application, providing users with real-time information about their surroundings.
