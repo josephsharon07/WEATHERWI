@@ -1,67 +1,74 @@
 ![WEATHERWI IoT Weather and Environment Monitoring System](/docs/assets/img/logo-side-dark.png)
 
-# IoT Weather and Environment Monitoring System - Final Project Document
+# IoT Weather and Environment Monitoring System - Website README
 
-## Project Overview
+This README file provides detailed information on how to navigate the WEATHERWI IoT Weather and Environment Monitoring System website, update its content, and manage dependencies.
 
-  The **WEATHERWI IoT Weather and Environment Monitoring System** is a comprehensive and fully implemented project that leverages IoT technology to collect and display real-time data related to weather conditions, light intensity, air quality, and climate. The project offers a user-friendly web application and an Android application, providing users with valuable insights into their local environment. This final project document highlights the key components, implementation details, and the overall achievement of the WEATHERWI project.
+## Table of Contents
 
-## Key Components
+1. [Website Navigation](#1-website-navigation)
+2. [Updating Content](#2-updating-content)
+3. [Dependencies](#3-dependencies)
 
-### Microcontroller
+## 1. Website Navigation
 
-  The heart of the system is the microcontroller, which plays a pivotal role in collecting data from various sensors. The **ESP32** microcontroller was chosen for its network capabilities, making it suitable for IoT applications.
+The WEATHERWI IoT Weather and Environment Monitoring System website offers a user-friendly interface for accessing real-time and historical environmental data. Here's how to navigate the website:
 
-### Sensors
+### Home Page
 
-  1. **Temperature and Humidity Sensor (DHT22):** The DHT22 sensor measures both temperature and humidity in the atmosphere, providing accurate and real-time data.
-  2. **Light Intensity Sensor (LDR):** The LDR sensor calculates light intensity, allowing users to determine whether the area is cloudy or sunny.
-  3. **Air Quality Sensor (MQ-135):** The MQ-135 sensor monitors the air quality, detecting the presence of harmful pollutants.
+- Upon visiting the website, you will land on the Home page.
+- The Home page provides an overview of the system and displays real-time environmental data, including temperature, humidity, light intensity, air quality, and climate conditions.
+- The navigation menu at the top of the page allows you to access other sections of the website.
 
-### Data Storage
+### Real-time Data
 
-  Data collected from the sensors is securely stored in **GitHub**, which provides a robust API for data storage and retrieval. Data is timestamped for visualization, processing, and analysis based on date and time.
+- Click on the "Real-time Data" link in the navigation menu to view the current environmental conditions in detail.
+- This section offers real-time data visualization using Chart.js, allowing you to monitor changes in temperature, humidity, light intensity, and air quality.
 
-### Web Application
+### Historical Data
 
-  The web application serves as the user interface, providing real-time and historical data visualization. It is designed as a static site and utilizes the **Chart.js** JavaScript library for efficient data processing.
+- Access the "Historical Data" section from the navigation menu to explore historical data.
+- This section provides a time-series graph of historical environmental data, enabling trend analysis over time.
 
-### Android Application
+### User Manual
 
-  An Android application has been developed for Android users, offering convenient access to real-time environmental data.
+- To access the user manual for guidance on using the system, click on the "User Manual" link in the navigation menu.
 
-## Implementation Details
+## 2. Updating Content
 
-### Sensor Setup
+The content on the WEATHERWI website is divided into two main sections: real-time data and historical data. To update the content, follow the guidelines below:
 
-  The sensors, including the DHT22, LDR, and MQ-135, are connected to the ESP32 microcontroller as follows:
+### Real-time Data Updates
 
-- **DHT22 Sensor:** Connected to the D0 pin of the ESP32 for measuring temperature and humidity, with connections to the ground and 3V output.
-- **LDR Sensor:** Connected to the D3 pin and GND for detecting light levels.
-- **MQ-135 Sensor:** Connected to the D4 pin of the ESP32 for monitoring air quality, with connections to the ground and 3V output.
+To update the real-time data displayed on the website:
 
-### Programming of Microcontroller
+1. The real-time data is automatically collected from the sensors connected to the ESP32 microcontroller.
+2. To modify the data presentation or style, you can edit the JavaScript code in the web application. The web application code is typically found in the "js" or "scripts" folder within the project's directory.
 
-  MicroPython has been used to program the ESP32 microcontroller, simplifying the task of programming and making it suitable for the specific project needs.
+### Historical Data Updates
 
-### Simulation
+Updating historical data requires a more involved process, as it involves managing data stored in GitHub. Follow these steps:
 
-  During the project development, a simulation of the microcontroller was conducted using **Wokwi**. Wokwi proved to be a valuable tool for simulating the project, especially for custom chip models like the MQ-135 sensor.
+1. Access the GitHub repository where the data is stored.
+2. Add or update data entries in the repository. Make sure each entry includes a timestamp to maintain data organization.
+3. The website retrieves historical data from the GitHub repository using API requests. Ensure that the data is consistently organized in the repository.
 
-## Achievements
+## 3. Dependencies
 
-  The WEATHERWI IoT Weather and Environment Monitoring System is a successful and fully implemented project that achieves its main objectives:
+The WEATHERWI website relies on several dependencies and technologies:
 
-- **Real-time Data:** The system provides real-time information on temperature, humidity, light intensity, air quality, and climate conditions.
-- **User Accessibility:** Both web and Android applications offer user-friendly interfaces for accessing environmental data.
-- **Secure Data Storage:** Data is securely stored in GitHub, with timestamping for research and analysis purposes.
-- **Efficient Data Processing:** The web application utilizes Chart.js for efficient data visualization without the need for a dedicated server.
+1. **GitHub:** Data storage solution for historical data. Data is retrieved using the GitHub API.
+
+2. **Chart.js:** JavaScript library used for data visualization on the website.
+
+3. **Web Server:** The website is hosted on a web server to make it accessible to users. The web server setup and maintenance are critical dependencies.
+
+4. **ESP32 Microcontroller:** The microcontroller is responsible for collecting real-time data from the connected sensors. Ensure that the microcontroller is functioning correctly.
 
 ## Conclusion
 
-  The WEATHERWI project demonstrates the potential of IoT technology in environmental monitoring. It provides a valuable tool for individuals and communities seeking to make informed decisions based on local weather and environmental conditions. The use of open-source technologies and the integration of IoT components make this system a relevant and practical application.
+The WEATHERWI IoT Weather and Environment Monitoring System website offers a user-friendly platform for accessing real-time and historical environmental data. With the provided guidance, you can navigate the website, update content, and manage dependencies to maintain the system's functionality.
 
-  The project has successfully transitioned from the planning and design phase to a fully implemented and functional system. As technology continues to advance, ongoing development and user engagement will help refine and enhance the system, ensuring accurate and reliable data for users.
+For any technical support or inquiries, please contact our support team.
 
-  We are proud of the accomplishments of the WEATHERWI IoT Weather and Environment Monitoring System and look forward to its continued success in providing essential environmental information to users.
-
+Thank you for using the WEATHERWI IoT Weather and Environment Monitoring System website.
