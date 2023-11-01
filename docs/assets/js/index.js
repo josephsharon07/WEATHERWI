@@ -8,6 +8,7 @@ fetch(url)
     return response.json();
   })
   .then((jsonData) => {
+    console.log(jsonData)
     // Now you can work with your JSON data
     const date = jsonData.date;
     const time = jsonData.time;
