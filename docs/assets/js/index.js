@@ -1,4 +1,4 @@
-const url = `https://raw.githubusercontent.com/josephsharon07/WEATHERWI/main/Database/Database.json`;
+const url = `https://raw.githubusercontent.com/josephsharon07/WEATHERWI/main/Database/liveData.json`;
 
 fetch(url)
   .then((response) => {
@@ -8,15 +8,14 @@ fetch(url)
     return response.json();
   })
   .then((jsonData) => {
-    console.log(jsonData)
     // Now you can work with your JSON data
     const date = jsonData.date;
     const time = jsonData.time;
-    const humidity = jsonData.data.Humidity;
-    const temperature = jsonData.data.Temperature;
-    const lightIntensity = jsonData.data['Light Intensity'];
-    const airQuality = jsonData.data['Air Quality'];
-    
+    const humidity = jsonData.data.humi;
+    const temperature = jsonData.data.temp;
+    const lightIntensity = jsonData.data.lig_inten;
+    const airQuality = jsonData.data.air_qual;
+
     // Update your HTML elements with the data
     document.getElementById('date').textContent = date;
     document.getElementById('time').textContent = time;
