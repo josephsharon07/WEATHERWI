@@ -29,20 +29,20 @@ fetch(url)
 
     if (lightIntensity >= 50000 && lightIntensity <= 100000) {
       weather_element.textContent = 'Sunny';
-      image_element.src = '/assets/img/sun.png';
+      image_element.src = './assets/img/sun.png';
     } else if (lightIntensity >= 50 && lightIntensity < 50000) {
       weather_element.textContent = 'Cloudy';
-      image_element.src = '/assets/img/partly-cloudy.png';
+      image_element.src = './assets/img/partly-cloudy.png';
       if (humidity >= 80) {
         weather_element.textContent = 'Raining';
-        image_element.src = '/assets/img/rainy-day.png';
+        image_element.src = './assets/img/rainy-day.png';
       }
     } else if (lightIntensity >= 0 && lightIntensity < 50) {
       weather_element.textContent = 'Night';
-      image_element.src = '/assets/img/crescent-moon.png';
+      image_element.src = './assets/img/crescent-moon.png';
       if (humidity >= 80) {
         weather_element.textContent = 'Raining';
-        image_element.src = '/assets/img/rainy-day.png';
+        image_element.src = './assets/img/rainy-day.png';
       }
     }
   })
