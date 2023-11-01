@@ -51,4 +51,3 @@ To use the WEATHERWI IoT Weather and Environment Monitoring System, follow these
 
 You have now successfully set up and accessed the WEATHERWI IoT Weather and Environment Monitoring System. You can monitor real-time and historical environmental data through the provided web page.
 
-If you encounter any issues or have questions, feel free to reach out for support. Enjoy using the system!
